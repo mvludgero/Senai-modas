@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SENAI MODAS - painel</title>
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background: linear-gradient(135deg,#0970c5,#040677);
+      color:white;
+    }
+
+    /* HEADER */
+
+    header{
+      width:100%;
+      padding:25px 50px;
+      background: rgba(255,255,255,0.10);
+      border-bottom:1px solid rgba(255,255,255,0.3);
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    header h1{
+      font-size:48px;
+      font-weight:bold;
+    }
+
+    nav{
+      display:flex;
+      gap:40px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-size:22px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      opacity:0.7;
+    }
+
+    /* CARDS */
+
+    .container{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:35px;
+      flex-wrap:wrap;
+
+      padding:80px 30px;
+    }
+
+    .card{
+      width:320px;
+      height:260px;
+
+      background: rgba(255,255,255,0.15);
+      border-radius:20px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+
+      transition:0.3s;
+      cursor:pointer;
+      backdrop-filter: blur(4px);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      background: rgba(255,255,255,0.22);
+    }
+
+    .card i{
+      font-size:90px;
+      margin-bottom:20px;
+    }
+
+    .card h2{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      font-size:20px;
+      opacity:0.9;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      margin-top:20px;
+      padding-bottom:30px;
+      font-size:20px;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:1100px){
+
+      header{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      header h1{
+        font-size:38px;
+        text-align:center;
+      }
+
+      nav{
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .card{
+        width:280px;
+      }
+    }
+
+    @media(max-width:600px){
+
+      header{
+        padding:20px;
+      }
+
+      header h1{
+        font-size:28px;
+      }
+
+      nav a{
+        font-size:16px;
+      }
+
+      .container{
+        padding-top:40px;
+      }
+
+      .card{
+        width:100%;
+        max-width:320px;
+        height:230px;
+      }
+
+      .card h2{
+        font-size:34px;
+      }
+
+      .card i{
+        font-size:70px;
+      }
+    }
+    .login{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .produtos{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .vendas{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .estoque{
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SENAI MODAS - Painel</h1>
+
+    <nav>
+      <a href="login.html">Login</a>
+      <a href="cadastros.html">Cadastros </a>
+      <a href="vendas.html">Vendas</a>
+      <a href="estoque.html">Estoque</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <a href="login.html" class="login">
+    <div class="card">
+      <i class="fa-solid fa-arrow-right-to-bracket"></i>
+      <h2>Login</h2>
+      <p>Acesse o sistema</p>
+    </div>
+    </a>
+
+    <a href="produtos.html" class="produtos">
+    <div class="card">
+      <i class="fa-solid fa-cart-plus"></i>
+      <h2>Produtos</h2>
+      <p>Gerencie os produtos da loja</p>
+    </div>
+    </a>
+    <a href="vendas.html" class="vendas">
+    <div class="card">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <h2>Vendas</h2>
+      <p>Realize e visualize vendas</p>
+    </div>
+    <a>
+
+    <a href="estoque.html" class="estoque">
+    <div class="card">
+      <i class="fa-solid fa-boxes-stacked"></i>
+      <h2>Estoque</h2>
+      <p>Controle do estoque</p>
+    </div>
+    <a>
+
+  </main>
+
+  <footer>
+    © 2026 SENAI MODAS - Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
