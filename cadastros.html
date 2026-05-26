@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SENAI MODAS - Cadastro</title>
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background: linear-gradient(135deg,#0f028a,#1da0d4);
+      color:white;
+    }
+
+    /* HEADER */
+
+    header{
+      width:100%;
+      padding:25px 50px;
+      background: rgba(255,255,255,0.10);
+      border-bottom:1px solid rgba(255,255,255,0.3);
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    header h1{
+      font-size:42px;
+      font-weight:bold;
+    }
+
+    nav{
+      display:flex;
+      gap:35px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-size:20px;
+      font-weight:600;
+      transition:0.3s;
+      position:relative;
+    }
+
+    nav a:hover{
+      opacity:0.7;
+    }
+
+    /* DROPDOWN */
+
+    .dropdown{
+      position:relative;
+    }
+
+    .dropdown-content{
+      position:absolute;
+      top:35px;
+      left:0;
+
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+
+      border-radius:15px;
+      padding:15px;
+
+      display:none;
+      flex-direction:column;
+      gap:12px;
+
+      min-width:260px;
+
+      box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a{
+      background: rgba(255,255,255,0.12);
+      padding:14px;
+      border-radius:10px;
+      font-size:17px;
+      transition:0.3s;
+
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .dropdown-content a:hover{
+      background: rgba(255,255,255,0.25);
+      transform:translateX(5px);
+    }
+
+    .dropdown:hover .dropdown-content{
+      display:flex;
+    }
+
+    /* CONTEÚDO */
+
+    .container{
+      width:100%;
+      padding:80px 30px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+    }
+
+    .titulo{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .titulo h2{
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    .titulo p{
+      font-size:22px;
+      opacity:0.9;
+    }
+
+    /* BOTÕES */
+
+    .cards{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:35px;
+    }
+
+    .card{
+      width:300px;
+      height:240px;
+
+      background: rgba(255,255,255,0.15);
+      border-radius:22px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+
+      cursor:pointer;
+      transition:0.3s;
+      backdrop-filter: blur(4px);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      background: rgba(255,255,255,0.25);
+    }
+
+    .card i{
+      font-size:75px;
+      margin-bottom:20px;
+    }
+
+    .card h3{
+      font-size:30px;
+      text-align:center;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      font-size:17px;
+      opacity:0.9;
+      text-align:center;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:30px;
+      font-size:18px;
+      opacity:0.9;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:900px){
+
+      header{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      nav{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .titulo h2{
+        font-size:38px;
+      }
+    }
+
+    @media(max-width:600px){
+
+      header{
+        padding:20px;
+      }
+
+      header h1{
+        font-size:28px;
+        text-align:center;
+      }
+
+      nav a{
+        font-size:16px;
+      }
+
+      .titulo h2{
+        font-size:32px;
+      }
+
+      .titulo p{
+        font-size:18px;
+      }
+
+      .card{
+        width:100%;
+        max-width:320px;
+      }
+    }
+    .produto{
+        text-decoration: none;
+        color: white;
+    }
+    .funcionario{
+         text-decoration: none;
+        color: white;
+    }
+    .vendas{
+ text-decoration: none;
+        color: white;
+    }
+    .estoque{
+        text-decoration: none;
+        color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+
+    <h1>SENAI MODAS - Painel</h1>
+
+    <nav>
+
+      <a href="#">Login</a>
+
+      <div class="dropdown">
+
+        <a href="#">Cadastro</a>
+
+        <div class="dropdown-content">
+
+          <a href="#">
+            <i class="fa-solid fa-box"></i>
+            Cadastrar Produtos
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-user-tie"></i>
+            Cadastrar Funcionários
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cadastrar Vendas
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-warehouse"></i>
+            Cadastrar Estoque
+          </a>
+
+        </div>
+
+      </div>
+
+      <a href="#">Vendas</a>
+      <a href="#">Estoque</a>
+
+    </nav>
+
+  </header>
+
+  <main class="container">
+
+    <div class="titulo">
+      <h2>Área de Cadastros</h2>
+      <p>Gerencie todas as informações do sistema</p>
+    </div>
+
+    <div class="cards">
+
+        <a href="produtos.html" class="produto">
+      <div class="card">
+        
+        <i class="fa-solid fa-box"></i>
+        <h3>Produtos</h3>
+        <p>Cadastre e gerencie os produtos</p>
+      </div>
+        </a>
+        
+
+         <a href="funcionario.html" class="funcionario">
+      <div class="card">
+        <i class="fa-solid fa-user-tie"></i>
+        <h3>Funcionários</h3>
+        <p>Controle os dados dos funcionários</p>
+      </div>
+         </a>
+
+      <a href="vendas.html" class="vendas">
+        <div class="card">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h3>Vendas</h3>
+        <p>Cadastre e visualize vendas</p>
+      </div>
+      </a>
+
+      <a href="estoque.html" class="estoque">
+      <div class="card">
+        <i class="fa-solid fa-warehouse"></i>
+        <h3>Estoque</h3>
+        <p>Gerencie o estoque da loja</p>
+      </div>
+      </a>
+      
+
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 SENAI MODAS - Todos os direitos reservados
+  </footer>
+
+</body>
+</html>

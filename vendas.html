@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI MODAS - finalizar venda</title>
+    <link rel="stylesheet" href="vendas.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SENAI MODAS</div>
+        <nav>
+            <a href="#">Coleções</a>
+            <a href="#">Masculino</a>
+            <a href="#">Feminino</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Galeria de Produtos -->
+        <section class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80" alt="Camiseta Branca">
+                <div class="info">
+                    <h3>Camiseta Basica</h3>
+                    <p class="price">R$ 79,90</p>
+                    <button class="add-btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=500&q=80" alt="Jaqueta">
+                <div class="info">
+                    <h3>Jaqueta com Zíper</h3>
+                    <p class="price">R$ 249,00</p>
+                    <button class="add-btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=500&q=80" alt="Calça Jeans">
+                <div class="info">
+                    <h3>Calça Jeans</h3>
+                    <p class="price">R$ 159,90</p>
+                    <button class="add-btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumo do Pedido (Carrinho Lateral) -->
+        <aside class="checkout-sidebar">
+            <h2>Resumo do Pedido</h2>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <span>1x Camiseta Basic</span>
+                    <span>R$ 79,90</span>
+                </div>
+            </div>
+            <hr>
+            <div class="total-section">
+                <div class="total-line">
+                    <span>Subtotal</span>
+                    <span>R$ 79,90</span>
+                </div>
+                <div class="total-line">
+                    <span>Frete</span>
+                    <span class="free">Grátis</span>
+                </div>
+                <div class="total-line grand-total">
+                    <span>Total</span>
+                    <span>R$ 79,90</span>
+                </div>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+        </aside>
+    </main>
+</body>
+</html>
